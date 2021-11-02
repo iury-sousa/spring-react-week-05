@@ -74,3 +74,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 Abaixo serão listadas as diferenças/melhorias que implementei em relação ao que foi passado.
 
 - O projeto foi criado utilizando o [Vite](https://vitejs.dev/) ao invés do `create-react-app`. O beneficio nessa mudança é a velocidade na criação do projeto, sendo quase que instantânea.
+
+- Foi implementado o Eslint, Prettier e Husky para analisar, formatar e garantir que o código não seja commitado com erros de formatação ou sintaxe.
