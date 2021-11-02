@@ -71,4 +71,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
   
 ## Melhorias
 
-- Projeto criado utilizando o [Vite](https://vitejs.dev/)
+Abaixo serão listadas as diferenças/melhorias que implementei em relação ao que foi passado.
+
+- O projeto foi criado utilizando o [Vite](https://vitejs.dev/) ao invés do `create-react-app`. O beneficio nessa mudança é a velocidade na criação do projeto, sendo quase que instantânea.

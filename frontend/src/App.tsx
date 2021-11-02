@@ -1,8 +1,4 @@
-import { DonutChart } from "./components/DonutChart";
-import { BarChart } from "./components/BarChart";
-import { DataTable } from "./components/DataTable";
-import { Footer } from "./components/Footer";
-import { NavBar } from "./components/NavBar";
+import { NavBar, BarChart, Footer, DataTable, DonutChart } from "@/components";
 
 export function App() {
   return (
