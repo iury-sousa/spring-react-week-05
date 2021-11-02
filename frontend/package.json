@@ -5,7 +5,13 @@
     "dev": "vite",
     "type-check": "tsc",
     "build": "tsc && vite build && shx cp _redirects ./dist/_redirects",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
+    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint": "yarn lint:format && yarn lint:fix",
+    "prettier:fix": "prettier --write",
+    "prettier:check": "prettier --check .",
+    "prepare": "cd .. && husky install && husky add .husky/pre-commit \"yarn lint-staged\""
   },
   "dependencies": {
     "@popperjs/core": "^2.10.2",
@@ -20,8 +26,17 @@
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "@typescript-eslint/parser": "^5.3.0",
     "@vitejs/plugin-react": "^1.0.0",
     "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
@@ -35,13 +50,13 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "eslint --cache --fix",
-      "git add"
+    "src/**/*.{js,ts,tsx, jsx}": [
+      "yarn prettier:fix",
+      "yarn lint"
     ],
-    "src/**/*.{js,jsx}": [
-      "eslint --cache --fix",
-      "git add"
+    "src/**/*.{json,md,html,js,jsx,ts,tsx}": [
+      "prettier --write",
+      "yarn lint"
     ]
   }
 }

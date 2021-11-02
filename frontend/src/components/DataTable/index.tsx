@@ -1,7 +1,7 @@
 export function DataTable() {
   return (
-    <div className="table-responsive">
-      <table className="table table-striped table-sm">
+    <div className='table-responsive'>
+      <table className='table table-striped table-sm'>
         <thead>
           <tr>
             <th>Data</th>

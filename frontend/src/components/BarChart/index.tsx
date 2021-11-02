@@ -1,5 +1,5 @@
-import { ApexOptions } from "apexcharts";
-import Chart from "react-apexcharts";
+import { ApexOptions } from 'apexcharts';
+import Chart from 'react-apexcharts';
 
 export function BarChart() {
   const options: ApexOptions = {
@@ -12,22 +12,15 @@ export function BarChart() {
 
   const mockData = {
     labels: {
-      categories: ["Anakin", "Barry Allen", "Kal-El", "Logan", "Padmé"],
+      categories: ['Anakin', 'Barry Allen', 'Kal-El', 'Logan', 'Padmé'],
     },
     series: [
       {
-        name: "% Sucesso",
+        name: '% Sucesso',
         data: [43.6, 67.1, 67.7, 45.6, 71.1],
       },
     ],
   };
 
-  return (
-    <Chart
-      options={{ ...options, xaxis: mockData.labels }}
-      series={mockData.series}
-      type="bar"
-      height="240"
-    />
-  );
+  return <Chart options={{ ...options, xaxis: mockData.labels }} series={mockData.series} type='bar' height='240' />;
 }
