@@ -2,7 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 
-echo -e '\n🏗️👷\033[0;32mStyling, testing and building your project before committing\033[0m\n'
+echo -e '\n🏗️👷\033[0;32mStyling and testing your project before committing\033[0m\n'
 
 cd frontend
 
