@@ -1,5 +1,27 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+
+echo -e '\n🏗️👷\033[0;32mStyling, testing and building your project before committing\033[0m\n'
+
 cd frontend
-yarn lint-staged
+
+# Check tsconfig standards
+yarn type-check ||
+(
+    echo -e '\n\033[1;31m❌❌❌Failed Type check!❌❌❌\033[0m\nAre you seriously trying to write that? Make the changes required above.\n'
+    false;
+)
+
+echo -e '\n'
+
+# Run prettier fix and check eslint
+yarn lint-staged ||
+(
+    echo -e '\n😤😤😤 \033[1;31mESLint Check Failed.!\033[0m😤😤😤\nMake the required changes listed above, add changes and try to commit again.\n'
+    false; 
+)
+
+# If everything passes... Now we can commit
+echo -e '\n✅✅✅\033[1;32m You win this time... I am committing this now. ✅✅✅\033[0m\n'
+

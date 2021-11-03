@@ -1,0 +1,14 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo -e '\n\033[0;32mInitializing the frontend build\033[0m\n'
+
+cd frontend
+
+yarn build ||
+(
+    echo -e '❌👷🔨❌\033[1;31mBuild failed!\033[0m❌👷🔨❌ View the errors above to see why.'
+    false;
+)
+
+echo -e '\n✅✅✅\033[1;32m Build completed successfully ✅✅✅\033[0m\n'

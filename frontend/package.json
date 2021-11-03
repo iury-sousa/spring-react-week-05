@@ -1,13 +1,14 @@
 {
   "name": "dsvendas",
   "version": "0.1.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "type-check": "tsc",
-    "build": "tsc && vite build && shx cp _redirects ./dist/_redirects",
+    "type-check": "tsc --pretty --noEmit",
+    "build": "vite build && shx cp _redirects ./dist/_redirects",
     "serve": "vite preview",
     "lint:fix": "eslint ./src --ext .jsx,.js,.ts,.tsx --quiet --fix --ignore-path ./.gitignore",
-    "lint:format": "prettier  --loglevel warn --write \"./**/*.{js,jsx,ts,tsx,css,md,json}\" ",
+    "lint:format": "prettier --loglevel warn --write \"./src/**/*.{js,jsx,ts,tsx,html,css,md,json}\" ",
     "lint": "yarn lint:format && yarn lint:fix",
     "prettier:fix": "prettier --write",
     "prettier:check": "prettier --check .",
@@ -40,15 +41,16 @@
     "husky": "^7.0.4",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
     "shx": "^0.3.3",
     "typescript": "^4.3.2",
     "vite": "^2.6.4"
   },
   "lint-staged": {
-    "src/**/*.{json,md,html,js,jsx,ts,tsx}": [
-      "yarn prettier:fix",
+    "src/**/*.{json,md,html,css,js,jsx,ts,tsx}": [
+      "yarn pretty-quick --staged",
       "eslint --fix",
-      "git add"
+      "git add ."
     ]
   }
 }
