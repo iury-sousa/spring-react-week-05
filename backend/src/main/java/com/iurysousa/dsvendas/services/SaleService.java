@@ -1,8 +1,5 @@
 package com.iurysousa.dsvendas.services;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 import com.iurysousa.dsvendas.dto.SaleDTO;
 import com.iurysousa.dsvendas.entities.Sale;
 import com.iurysousa.dsvendas.repositories.SaleRepository;
