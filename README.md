@@ -1,5 +1,7 @@
 # DevSuperior Week 05
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2a4a7e76-f984-46d5-9e10-920126ed4002/deploy-status)](https://app.netlify.com/sites/dsvendas-iury/deploys)
+
 ## Sobre o projeto
 
 Esse projeto faz parte da Semana Spring React realizado pela DevSuperior.
