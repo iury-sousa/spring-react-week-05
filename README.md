@@ -17,9 +17,11 @@ O propósito do presente projeto é implementar uma pagína de dashboard para a 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 
 - Controle de versão
+
   - [Git](https://git-scm.com)
 
 - Frontend
+
   - [Node.js](https://nodejs.org/en/)
   - [Yarn](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
   - [VSCode](https://code.visualstudio.com/)
@@ -70,7 +72,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started)
 - [ApexCharts](https://apexcharts.com/docs/react-charts/)
 - [Spring](https://spring.io/)
-  
+- [Postgresql](https://www.postgresql.org/download/)
+
 ## Melhorias
 
 Abaixo serão listadas as diferenças/melhorias que implementei em relação ao que foi passado.
@@ -78,3 +81,4 @@ Abaixo serão listadas as diferenças/melhorias que implementei em relação ao 
 - O projeto foi criado utilizando o [Vite](https://vitejs.dev/) ao invés do `create-react-app`. O beneficio nessa mudança é a velocidade na criação do projeto, sendo quase que instantânea.
 
 - Foi implementado o Eslint, Prettier e Husky para analisar, formatar e garantir que o código não seja commitado com erros de formatação ou sintaxe.
+- Utilizado o Java na versão 17 LTS.

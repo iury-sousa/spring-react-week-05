@@ -1,6 +1,6 @@
-import { NavBar, BarChart, Footer, DataTable, DonutChart } from '@/components';
+import { BarChart, DataTable, DonutChart, Footer, NavBar } from '@/components';
 
-export function App() {
+export function DashboardPage() {
   return (
     <>
       <NavBar />
